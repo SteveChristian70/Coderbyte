@@ -11,6 +11,7 @@ def SimpleSymbols(str):
 
   if str[0].isalpha() or str[-1].isalpha():
     return 'false'
+    # xrange() should be quicker than range()
   for i in xrange(1, len(str)-1):
     if str[i].isalpha() and (not str[i-1] == '+' or not str[i+1] == '+'):
       return 'false'
